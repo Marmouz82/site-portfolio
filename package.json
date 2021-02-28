@@ -1,0 +1,19 @@
+{
+  "name": "site-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marmouz82/site-portfolio.git"
+  },
+  "author": "Marmouz82",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Marmouz82/site-portfolio/issues"
+  },
+  "homepage": "https://github.com/Marmouz82/site-portfolio#readme"
+}
