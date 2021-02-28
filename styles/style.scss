@@ -1,0 +1,210 @@
+$blancCasse: #f1f1f1;
+$blancGris: #f5f5f5;
+$sombre: #333;
+
+@mixin flexCentreX {
+  display: flex;
+  justify-content: center;
+}
+
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+
+// ================== Navbar ==================
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  background-color: $blancGris;
+  @include flexCentreX;
+  border-bottom: 1px solid #000;
+  z-index: 100;
+
+  .contItems {
+    font-size: 22px;
+    height:100%;
+    display: flex;
+    align-items: center;
+
+    .items {
+      margin-right: 30px;
+      text-decoration: none;
+      color: #000;
+
+      &:hover {
+        color: #5f5f5f;
+      }
+    }
+  }
+}
+
+// ================== Accueil ==================
+
+.accueil {
+  width: 100%;
+  height: 800px;
+  background-color: $sombre;
+  background-image: url('../ressources/home.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-family: 'Abril Fatface', cursive;
+    color: $blancCasse;
+    font-size: 70px;
+    letter-spacing: 5px;
+    margin: 0;
+    position: relative;
+    padding-top: 150px;
+    
+    &::first-letter {
+      font-size: 120px;
+    }
+  }
+
+  .sousTitreP {
+    color: $blancCasse;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+
+  .accueil h1 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+
+  .accueil {
+    height: 600px;
+
+    h1 {
+      font-size: 30px;
+    }
+    .sousTitreP {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+
+  .accueil {
+    height: 500px;
+    align-items: flex-start;
+
+    h1 {
+      margin: 0px 20px;
+
+      &::first-letter {
+        font-size: 50px;
+      }
+    }
+    .sousTitreP {
+      margin: 0px 20px;
+    }
+  }
+}
+
+// =========== Section 1 texte et images ===========
+
+.titreSec1 {
+  text-align: center;
+  font-size: 40px;
+  padding-top: 20px;
+}
+
+.txtImg {
+  padding-top: 20px;
+  width: 100%;
+  @include flexCentreX;
+  border-bottom: 1px dashed lightskyblue;
+
+  .flexContainerSection1 {
+    @include flexCentreX;
+    width: 1200px;
+
+    .contImgSec1 {
+      width: 45%;
+      margin: 20px;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 2px;
+      }
+    }
+
+    .contTxtSec1 {
+      width: 45%;
+      background-color: azure;
+      margin: 20px;
+      border-radius: 2px;
+
+      h2 {
+        text-align: center;
+        font-size: 35px;
+      }
+
+      .sousTitreSec1 {
+        text-align: center;
+      }
+
+      hr {
+        width: 60px;
+      }
+
+      .txtSec1 {
+        font-size: 19px;
+        padding: 15px;
+
+        &::first-letter {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+
+  .txtImg .flexContainerSection1 {
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+
+    .contImgSec1 {
+      width: 100%;
+    }
+
+    .contTxtSec1 {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+
+  .titreSec1 {
+    font-size: 25px;
+  }
+}
+
+/* font-family: 'Abril Fatface', cursive;
+font-family: 'Poppins', sans-serif; */

@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Marmouz82/site-portfolio/issues"
   },
-  "homepage": "https://github.com/Marmouz82/site-portfolio#readme"
+  "homepage": "https://github.com/Marmouz82/site-portfolio#readme",
+  "dependencies": {
+    "sass": "^1.32.8"
+  }
 }
